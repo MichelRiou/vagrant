@@ -1,0 +1,11 @@
+{
+    "name": "seb/web-app",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Sebastien Maloron",
+            "email": "contact@smaloron.eu"
+        }
+    ],
+    "require": {}
+}
