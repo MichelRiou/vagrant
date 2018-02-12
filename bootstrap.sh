@@ -2,9 +2,7 @@
 
 
 PASSWORD='123'
-PHPVERSION='7.0'
-
-
+PHPVERSION='7.1'
 
 # update / upgrade
 sudo apt-get update
@@ -15,7 +13,7 @@ apt-get install -y memcached
 
 # apache et php 
 sudo apt-get install -y apache2
-sudo apt-get install -y php  
+sudo apt-get install -y php$PHPVERSION  
 sudo apt-get install -y php-curl php-gd php-mcrypt php-zip php-xsl php-memcached php-xdebug
 sudo apt-get install -y libapache2-mod-php
 
@@ -59,7 +57,7 @@ xdebug.remote_port=9000
 xdebug.remote_handler="dbgp"
 EOF
 )
-echo "${XDEBUG}" > /etc/php/7.0/apache2/conf.d/20-xdebug.ini
+echo "${XDEBUG}" > /etc/php/$PHPVERSION/apache2/conf.d/20-xdebug.ini
 
 
 # réécriture d'url
