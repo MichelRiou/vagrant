@@ -2,7 +2,7 @@
 
 
 PASSWORD='123'
-PHPVERSION='7.1'
+PHPVERSION='7.0'
 
 # update / upgrade
 sudo apt-get update
