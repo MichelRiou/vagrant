@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<phpunit colors="true">
+    <testsuite name="test du framework">
+        <directory>./tests</directory>
+    </testsuite>
+    <filter>
+        <whitelist processUncoveredFromWhiteList="true">
+            <directory siffic=".php">Framework</directory>
+        </whitelist>
+    </filter>
+</phpunit>

@@ -31,6 +31,12 @@ class Router implements RouterInterface
      */
     public function __construct($url)
     {
+        if(substr($url, 0,1)=="/"){
+            $url=substr($url,1);
+        }
+        if(substr($url,-1)=="/"){
+            $url=substr($url,0,strlen($url)-1);
+        }
         $this->url = $url;
 
         $this->matchRoute();
@@ -54,7 +60,7 @@ class Router implements RouterInterface
             $this->actionName = array_shift($urlParts)."Action";
         }
         //Récupération des paramètres
-        if(count($urlParts) >0){
+        if(count($urlParts) >0 && ! empty($urlParts[0])){
             $this->actionParameters = $urlParts;
         }
     }
