@@ -13,7 +13,8 @@
     },
     "autoload":{
         "psr-4":{
-            "m2i\\Validators\\": "src/Validators/"
+            "m2i\\Validators\\": "src/Validators/",
+            "m2i\\framework\\": "Framework/"
         }
     }
 }
