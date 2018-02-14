@@ -7,14 +7,17 @@
             "email": "contact@smaloron.eu"
         }
     ],
-    "require": {},
+    "require": {
+        "gabordemooij/redbean": "^5.0"
+    },
     "require-dev": {
         "phpunit/phpunit": "^6.5"
     },
     "autoload":{
         "psr-4":{
             "m2i\\Validators\\": "src/Validators/",
-            "m2i\\framework\\": "Framework/"
+            "m2i\\framework\\": "Framework/",
+            "m2i\\Controllers\\": "src/Controllers/"
         }
     }
 }
