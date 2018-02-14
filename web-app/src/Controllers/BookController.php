@@ -44,7 +44,7 @@ class BookController
             // Avec Import on fait une hydratation !!!!!
             $book->import($_POST["book"]); //Le nom des champs doit correspondre aux champs du formulaire
             R::store($book);
-            header("location:".BASE_URL."/book/list");
+            header("location:" . BASE_URL . "/book/list");
         }
         echo $this->view->render("book-form", ["title" => "Nouveau Livre"]);
     }
@@ -53,11 +53,29 @@ class BookController
     {
         include ROOT_PATH . "/src/views/vues-sans-classe.php";
     }
-    public function deleteAction($id){
+
+    public function deleteAction($id)
+    {
         // Charger le livre
-        $book=R::load("books",$id);
+        $book = R::load("books", $id);
         R::trash($book);
         // REdirection vers la liste des livres
-        header("location:".BASE_URL."/book/list");
+        header("location:" . BASE_URL . "/book/list");
+    }
+
+    public function updateAction($id)
+    {
+        // Chargement du livre à modifier
+        $book = R::load("books", $id);
+
+        // TRaitement éventuel du formulaire
+        $isPosted = filter_has_var(INPUT_POST, "submit");
+        if ($isPosted) {
+            //Création d'une entité à partir des données postées
+            $book->import($_POST["book"]); //Le nom des champs doit correspondre aux champs du formulaire
+            R::store($book);
+            header("location:" . BASE_URL . "/book/list");
+        }
+        echo $this->view->render("book-form", ["title" => "Modification d'un livre","book"=>$book]);
     }
 }

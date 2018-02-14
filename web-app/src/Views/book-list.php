@@ -9,7 +9,7 @@
     <th>Genre</th>
     <th>Editeur</th>
     <th>Prix</th>
-    <th>Action</th>
+    <th colspan="2">Action</th>
 </tr>
 
 <!-- Les : évite de se retrouver avec en fin de foreach <}> -->
@@ -21,6 +21,7 @@
         <td><?= $book->editor ?></td>
         <td><?= $book->price ?></td>
         <td><a href="<?=BASE_URL?>./book/delete/<?=$book->id?>" class="btn btn-danger">Supprimer</a></td>
+        <td><a href="<?=BASE_URL?>./book/update/<?=$book->id?>" class="btn btn-primary">Modifier</a></td>
     </tr>
 <?php endforeach ?>
 </table>
