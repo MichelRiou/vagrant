@@ -1,6 +1,6 @@
 <?php
 namespace m2i\framework;
-
+// Spécification du namespace à utiliser pour le création de la classe Router
 
 class Router implements RouterInterface
 {
@@ -44,9 +44,9 @@ class Router implements RouterInterface
 
     /**
      * Convertir un url en :
-     *  - un nom de contrôleur,
-     *  - un nom d'action
-     *  - et un tableau de paramètres
+     *  - un nom de contrôleur,                 (Class)
+     *  - un nom d'action                       (Method)
+     *  - et un tableau de paramètres           (Parametres pour la méthode)
      */
     private function matchRoute(){
         $urlParts = explode("/", $this->url);

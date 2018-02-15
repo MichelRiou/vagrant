@@ -59,7 +59,7 @@ class BookController
         // Charger le livre
         $book = R::load("books", $id);
         R::trash($book);
-        // REdirection vers la liste des livres
+        // Redirection vers la liste des livres
         header("location:" . BASE_URL . "/book/list");
     }
 
@@ -68,7 +68,7 @@ class BookController
         // Chargement du livre à modifier
         $book = R::load("books", $id);
 
-        // TRaitement éventuel du formulaire
+        // Traitement éventuel du formulaire
         $isPosted = filter_has_var(INPUT_POST, "submit");
         if ($isPosted) {
             //Création d'une entité à partir des données postées
@@ -76,6 +76,6 @@ class BookController
             R::store($book);
             header("location:" . BASE_URL . "/book/list");
         }
-        echo $this->view->render("book-form", ["title" => "Modification d'un livre","book"=>$book]);
+        echo $this->view->render("book-form", ["title" => "Modification d'un livre", "book" => $book]);
     }
 }

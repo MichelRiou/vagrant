@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: formation
- * Date: 12/02/2018
- * Time: 14:30
- */
-
 namespace m2i\framework;
-
+// Spécification du namespace à utiliser pour le création de l'interface RouterInterface
 interface RouterInterface
 {
     /**

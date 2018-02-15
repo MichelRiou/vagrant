@@ -1,6 +1,6 @@
 <?php
 namespace m2i\framework;
-
+// Spécification du namespace à utiliser pour le création de la classe Dispatcher
 
 class Dispatcher
 {

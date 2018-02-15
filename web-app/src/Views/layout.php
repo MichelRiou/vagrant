@@ -7,7 +7,7 @@
     </head>
         <body class="container-fluid">
         <div class=""row justify-content-md-center>
-            <div class="col col-md-6" >
+            <div class="col col-md-12" >
                      <?= $viewContent ?>
             </div>
         </body>
